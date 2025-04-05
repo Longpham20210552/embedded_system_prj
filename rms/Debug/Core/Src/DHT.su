@@ -1,0 +1,4 @@
+../Core/Src/DHT.c:22:6:microDelay	16	static
+../Core/Src/DHT.c:30:9:DHT11_Start	32	static
+../Core/Src/DHT.c:70:9:DHT11_Read	16	static
+../Core/Src/DHT.c:96:7:DHT11	16	static
