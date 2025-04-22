@@ -1,20 +1,20 @@
-# 🌫️ Embedded Humidity Monitoring System
+# Embedded Humidity Monitoring System
 
 This embedded system project periodically acquires air humidity data and displays it via a serial interface or LCD. It demonstrates both **single-task** and **multi-task** scheduling techniques to manage sensor reading, data logging, and display operations.
 
-## 📌 Features
+## Features
 
 - Periodic **humidity sensor reading**
 - **Data display** via UART serial or LCD (I2C)
 - **Data logging** using internal/external storage (optional)
 - Implementation of various **task scheduling techniques**
 
-## ⚙️ Hardware Specification
+## Hardware Specification
 
 Target platform: **STM32F103C8T6 (Blue Pill)**  
 Clock: 72 MHz, 20 KB RAM, 64 KB Flash
 
-### 🧩 Connected Modules
+### Connected Modules
 
 | Module               | Interface | STM32 Pins Used | Description                                 |
 |----------------------|-----------|------------------|---------------------------------------------|
@@ -23,15 +23,15 @@ Clock: 72 MHz, 20 KB RAM, 64 KB Flash
 | **DS1307 RTC**       | I2C       | `PB6` (SCL), `PB7` (SDA) | Real-time clock module                      |
 | **CP2102 UART-USB**  | UART      | `PA9` (TX), `PA10` (RX) | Serial communication with PC               |
 
-## 🧠 Scheduling Techniques
+## Scheduling Techniques
 
-### 🔁 Single-task Scheduling
+### Single-task Scheduling
 
 Two main strategies using blocking loop:
 - `main_loop`: Sensor read → log → display (sequential)
 - `time_slice`: Split time for each task inside main loop
 
-### ⏱️ Multitasking Scheduling
+### Multitasking Scheduling
 
 - `Round Robin`: Tasks executed cyclically without priority
 - `Rate Monotonic Scheduling (RMS)`: Frequent tasks get higher priority
