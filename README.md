@@ -38,3 +38,6 @@ Two main strategies using blocking loop:
 - **Implemented using**:
   - **RTOS** (e.g., FreeRTOS), or
   - **Timer Interrupts** for cooperative multitasking
+
+### Final product demo
+![image](https://github.com/user-attachments/assets/dff5e899-4dc0-4bb3-9afb-16d05c780526)
